@@ -1,0 +1,11 @@
+/* comment ***/
+read[x,y];
+conditional [
+option (> x 20) do assign 2 to z
+] else assign 1 to z end;
+conditional [
+	option (> x y) do while (> x 0) {assign - x z to x; print[x]}
+	option (< x y) do while (> y 0) {assign - y z to y; print[y]}
+	]
+	end;
+print[x,y,*(z,2,2)]
